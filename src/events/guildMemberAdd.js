@@ -54,15 +54,15 @@ export default {
                 } else {
                     const embed = new EmbedBuilder()
                         .setColor(welcomeConfig.welcomeEmbed?.color || getColor('success'))
-                        .setTitle(embedTitle)
-                        .setDescription(welcomeMessage)
+                        .setTitle(Welcome to ${member.guild.name}!)
+                        .setDescription(`Hello ${member.user}! Welcome to Vellora RP. We hope you enjoy your stay!`)
                         .setThumbnail(user.displayAvatarURL())
                         .addFields(
                             { name: 'User', value: `${user.tag} (${user.id})`, inline: true },
                             { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
                         )
                         .setTimestamp()
-                        .setFooter({ text: embedFooter });
+                        .setFooter({ text: Powered by Vellora RP. Maintained by Kazu.exe });
                     
                     if (welcomeConfig.welcomeImage) {
                         embed.setImage(welcomeConfig.welcomeImage);
