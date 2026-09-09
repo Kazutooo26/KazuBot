@@ -20,7 +20,7 @@ export default {
         
         const welcomeConfig = await getWelcomeConfig(member.client, guild.id);
         
-        const welcomeChannelId = welcomeConfig?.1547192777954041916;
+        const welcomeChannelId = welcomeConfig?.channelId;
 
         if (welcomeConfig?.enabled && welcomeChannelId) {
             const channel = guild.channels.cache.get(welcomeChannelId);
